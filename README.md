@@ -1,6 +1,6 @@
 # Weather forcast api
 
-## Requirement
+## App mockup
 
 1. use the open weather api to fetch the 5-day weather forecast
 2. user can enter the zip code in the input field, and show the correspond title as
