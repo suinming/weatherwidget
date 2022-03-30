@@ -9,7 +9,7 @@ class WeatherService {
         const url = `${WEATHER_URL}zip=${this.zipCode}&units=imperial&appid=${WEATHER_API}`
         return new Promise(async (success, failure) => {
             try {
-                const res = await fetch(url)
+                const res = await fetch(url, { mode: 'cors', })
                 if (res.ok) {
                     const json = await res.json()
                     const location = json.city
@@ -31,6 +31,7 @@ class WeatherService {
                 }
             } catch (error) {
                 failure(error)
+                throw error
             }
         })
 
